@@ -1,0 +1,19 @@
+
+
+
+<div class="max-w-7xl">
+  <div class="flex justify-center flex-wrap">
+    <app-card *ngFor="let card of products"
+      class="mx-2 my-2 shadow-lg hover:shadow-2xl rounded-md "
+      [id]="card.id"
+      [name]="card.name"
+      [price]="card.price"
+      [brand]="card.brand"
+      [keyword]="card.keyword"
+      [img]="card.img"
+    ></app-card>
+  </div>
+</div>
+
+<app-paginator [totalElements]="cantidadPost" [elementsPage]="elementosPorPagina" (pageChange)="pageChanged($event)"></app-paginator>
+

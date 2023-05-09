@@ -1,0 +1,12 @@
+<div class="w-full card hover:cursor-pointer ">
+  <img class="w-8/12 max-w-[200px]  m-auto" [src]="img" alt="" srcset="">
+  <h3 class="font-bold text-center">{{name}}</h3>
+  <p class="text-gray-400 text-center">{{brand}}</p>
+  <h2 class="font-semibold text-green-600 text-center">{{price | currency }}</h2>
+  <app-card-input (totalItems)="setItemsNumber($event)"></app-card-input>
+  <div class="flex justify-center my-3">
+    <button mat-icon-button aria-label="Add to cart" (click)="addToCart()">
+      <mat-icon>shopping_cart</mat-icon>Comprar
+    </button>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="mx-3 ">
+  <form [formGroup]="searchForm" class="flex">
+    <input
+      class="min-w-[320px] rounded h-9 w-full text-gray-800"
+      type="text"
+      name="search"
+      id=""
+      [placeholder]="translateService.instant('inputSearch.placeholder')"
+      formControlName = 'keywords'
+    />
+    <!-- <button class="mx-1 bg-white rounded" (click)="makeRequest(searchForm.controls['keywords'].value)">
+      <img width="30px" src="/assets/svg/search.svg" alt="" srcset="">
+    </button> -->
+  </form>
+</div>

@@ -1,0 +1,22 @@
+<div class="flex justify-center">
+  <button
+    class="bg-gray-300 w-12 h-8 mx-1 rounded my-2"
+    (click)="prevPage()"
+    [disabled]="selectedPage===0"
+    [ngClass]="{ 'bg-gray-400 text-gray-500 transition-all': selectedPage === 0 }"
+  >Prev</button>
+  <button
+    class="bg-gray-300 w-8 h-8 mx-1 rounded my-2"
+    [ngClass]="{ 'bg-green-500 text-white transition-all': selectedPage === i }"
+    (click)="changePage(i)"
+    *ngFor="let page of arrayPages; let i = index"
+  >
+    {{ i + 1 }}
+  </button>
+  <button
+    class="bg-gray-300 w-12 h-8 mx-1 rounded my-2"
+    (click)="nextPage()"
+    [disabled]="selectedPage===pages-1"
+    [ngClass]="{ 'bg-gray-400 text-gray-500 transition-all': selectedPage === pages-1 }"
+  >Next</button>
+</div>

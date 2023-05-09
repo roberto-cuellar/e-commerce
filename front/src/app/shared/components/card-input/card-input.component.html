@@ -1,0 +1,14 @@
+<div class="flex justify-center p-7">
+  <button mat-icon-button aria-label="Clear" (click)="decreaseNumber()">
+    <mat-icon>remove</mat-icon>
+  </button>
+
+  <form [formGroup]="inputForm">
+    <input formControlName="itemsNumber" type="number" class="text-center" placeholder="1" min="0">
+
+  </form>
+
+  <button mat-icon-button aria-label="Clear" (click)="increaseNumber()">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

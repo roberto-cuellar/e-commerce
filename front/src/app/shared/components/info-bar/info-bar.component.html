@@ -1,0 +1,13 @@
+<div *ngIf="show" cdkMenuBar class="bg-slate-800 text-white text-sm">
+  <div class="flex max-w-7xl"
+    [ngClass]="{'flex-row-reverse': inforBar.btnsPosition === 'right'}"
+  >
+    <div id="btn-group">
+      <button class="mx-1" *ngFor="let item of inforBar.items" cdkMenuItem>{{  item.label! | translate}} <span>|</span></button>
+    </div>
+    <div id="info-text" class="mx-5">
+      <p>{{  inforBar.infoText! | translate}}</p>
+    </div>
+  </div>
+</div>
+
